@@ -44,12 +44,6 @@ cat << EOF >> /etc/fluent/fluent.conf
   keep_time_key true
 </source>
 
-<filter kubernetes.**>
-  @type kubernetes_metadata
-  kubernetes_url ${KUBERNETES_URL}
-  verify_ssl ${KUBERNETES_VERIFY_SSL}
-  preserve_json_log ${KUBERNETES_PRESERVE_JSON_LOG}
-</filter>
 
 <filter **>
   @type prometheus
